@@ -1,7 +1,8 @@
 NAME = ex02
 
-SRCS =  main.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
+HEADERS = Array.hpp
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17
@@ -11,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp
+%.o: %.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

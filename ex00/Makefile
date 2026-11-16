@@ -2,7 +2,7 @@ NAME = ex00
 
 SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
-HEADERS = Array.hpp
+HEADERS = whatever.hpp
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17
